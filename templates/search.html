@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Weather
+{% endblock title %}
+{% block body %}
+<br>
+<form action='/' method="POST">
+<center><h1 class="ml-auto mr-4 large-font">Weather Report</h1></center>
+<div class=" bg-gradient container-fluid text-center">
+    <div class="mb-4 container">
+        <label class="form-label"></label>
+        <input type="text" class="form-control container" name="city" id="city" >
+      </div>
+        <button id="search" type="submit" class="btn btn-success btn-gradient">Search</button><br><br>
+    </div>
+</div>
+</div>
+</form>
+<br>
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+    <div class="row d-flex justify-content-center px-3">
+        <div class="card">
+            <h2 class="ml-auto mr-4 mt-3 mb-0">{{ weather.city }}</h2>
+            <p class="ml-auto mr-4 mb-0 med-font">{{ weather.description }}</p>
+            <h1 class="ml-auto mr-4 large-font">{{ weather.temp }}&#176;</h1>
+            <p class="ml-4 mb-4">Humidity: {{ weather.humidity }}</p>
+            <p class="ml-4 mb-4">Country Code: {{ weather.country }}</p>
+        </div>
+    </div>
+</div>
+{% endblock body %}
