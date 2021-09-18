@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=["POST", "GET"])
 def search():
-    url = 'http://api.openweathermap.org/data/2.5//weather?q={}&units=metric&appid=a1aa59589cbd9247c0f8c239c8e758bd'
+    url = '' #api key
     city = request.form.get('city')
     r = requests.get(url.format(city)).json()
 
