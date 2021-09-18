@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=["POST", "GET"])
 def search():
-    url = '' #api key
+    url = '' //api key
     city = request.form.get('city')
     r = requests.get(url.format(city)).json()
 
